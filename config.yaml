@@ -1,0 +1,28 @@
+save_total_statistic: false
+
+notifaer:
+  telegram:
+    is_active: true
+    token: ""
+    chat.id: ""
+  yuchat:
+    is_active: false
+    token: ""
+    chat.id: ""
+    workspace.id: ""
+
+kafka:
+  consumer_config:
+    bootstrap.servers: ""
+    group.id: ""
+    auto.offset.reset: "earliest"
+    enable.auto.commit: true
+  topic: ""
+  num_partitions: 20 #кол-во партиций
+  projections: #поиск по префиксу или полному названию в ключе сообщения
+    - ""
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  datefmt: "%Y-%m-%d %H:%M:%S"
